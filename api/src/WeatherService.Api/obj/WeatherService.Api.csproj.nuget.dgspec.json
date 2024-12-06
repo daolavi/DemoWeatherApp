@@ -1,0 +1,249 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Api/WeatherService.Api.csproj": {}
+  },
+  "projects": {
+    "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Api/WeatherService.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Api/WeatherService.Api.csproj",
+        "projectName": "WeatherService.Api",
+        "projectPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Api/WeatherService.Api.csproj",
+        "packagesPath": "/home/daolavi/.nuget/packages/",
+        "outputPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Api/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/daolavi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Contracts/WeatherService.Contracts.csproj": {
+                "projectPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Contracts/WeatherService.Contracts.csproj"
+              },
+              "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.WeatherApiClient/WeatherService.WeatherApiClient.csproj": {
+                "projectPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.WeatherApiClient/WeatherService.WeatherApiClient.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.5.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/daolavi/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Contracts/WeatherService.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Contracts/WeatherService.Contracts.csproj",
+        "projectName": "WeatherService.Contracts",
+        "projectPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Contracts/WeatherService.Contracts.csproj",
+        "packagesPath": "/home/daolavi/.nuget/packages/",
+        "outputPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/daolavi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/daolavi/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.WeatherApiClient/WeatherService.WeatherApiClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.WeatherApiClient/WeatherService.WeatherApiClient.csproj",
+        "projectName": "WeatherService.WeatherApiClient",
+        "projectPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.WeatherApiClient/WeatherService.WeatherApiClient.csproj",
+        "packagesPath": "/home/daolavi/.nuget/packages/",
+        "outputPath": "/home/daolavi/Projects/code-test-dao-lam/api/src/WeatherService.WeatherApiClient/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/daolavi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/daolavi/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

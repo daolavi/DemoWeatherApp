@@ -1,0 +1,26 @@
+parameters:
+  environment: ''
+  artifactName: ''
+  azureSubscription: ''
+  appServiceName: ''
+  resourceGroupName: ''
+
+jobs:
+  - job: Deploy
+    displayName: 'Deploy to Azure App Service (${{parameters.environment}})'
+    steps:
+      - task: DownloadPipelineArtifact@2
+        displayName: 'Download artifact'
+        inputs:
+          source: 'current'
+          artifact: ${{ parameters.artifactName }}
+          path: '$(Pipeline.Workspace)'
+
+      - task: AzureWebApp@1
+        displayName: 'Deploy to Azure App Service (${{parameters.environment}})'
+        inputs:
+          azureSubscription: ${{ parameters.azureSubscription }}
+          appType: 'webApp'
+          appName: ${{ parameters.appServiceName }}
+          resourceGroupName: ${{ parameters.resourceGroupName }}
+          package: '$(Pipeline.Workspace)/**/*.zip'

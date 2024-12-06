@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService.Api", "src\WeatherService.Api\WeatherService.Api.csproj", "{E5F6A6E5-8C99-4B98-83B2-71516BB14ED6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D2B98D98-3D55-46F9-A87C-DEDDD4FEEA5F}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{780CE9BE-B8D4-42AE-BCF9-D3A9DEDF689B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C9D8CD1A-5DD5-493F-93BD-46A23D0ACE72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService.WeatherApiClient", "src\WeatherService.WeatherApiClient\WeatherService.WeatherApiClient.csproj", "{8810BEDB-F1A9-445F-B2DF-5FAC341442F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService.Contracts", "src\WeatherService.Contracts\WeatherService.Contracts.csproj", "{EBCA71E9-BC89-4CB3-8209-7CC436B6E90E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService.Api.IntegrationTests", "test\WeatherService.Api.IntegrationTests\WeatherService.Api.IntegrationTests.csproj", "{2ED293C0-69B3-4B04-B12E-F01887139818}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{13ADE523-B70A-4928-9771-C45B563F785D}"
+	ProjectSection(SolutionItems) = preProject
+		pipelines\template-deploy.yml = pipelines\template-deploy.yml
+		pipelines\template-restore-build-test.yml = pipelines\template-restore-build-test.yml
+		pipelines\weatherapi-pipeline.yml = pipelines\weatherapi-pipeline.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5F6A6E5-8C99-4B98-83B2-71516BB14ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F6A6E5-8C99-4B98-83B2-71516BB14ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F6A6E5-8C99-4B98-83B2-71516BB14ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F6A6E5-8C99-4B98-83B2-71516BB14ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8810BEDB-F1A9-445F-B2DF-5FAC341442F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8810BEDB-F1A9-445F-B2DF-5FAC341442F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8810BEDB-F1A9-445F-B2DF-5FAC341442F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8810BEDB-F1A9-445F-B2DF-5FAC341442F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBCA71E9-BC89-4CB3-8209-7CC436B6E90E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCA71E9-BC89-4CB3-8209-7CC436B6E90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCA71E9-BC89-4CB3-8209-7CC436B6E90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCA71E9-BC89-4CB3-8209-7CC436B6E90E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED293C0-69B3-4B04-B12E-F01887139818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED293C0-69B3-4B04-B12E-F01887139818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED293C0-69B3-4B04-B12E-F01887139818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED293C0-69B3-4B04-B12E-F01887139818}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5F6A6E5-8C99-4B98-83B2-71516BB14ED6} = {780CE9BE-B8D4-42AE-BCF9-D3A9DEDF689B}
+		{8810BEDB-F1A9-445F-B2DF-5FAC341442F2} = {780CE9BE-B8D4-42AE-BCF9-D3A9DEDF689B}
+		{EBCA71E9-BC89-4CB3-8209-7CC436B6E90E} = {780CE9BE-B8D4-42AE-BCF9-D3A9DEDF689B}
+		{2ED293C0-69B3-4B04-B12E-F01887139818} = {C9D8CD1A-5DD5-493F-93BD-46A23D0ACE72}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {514D0A2B-46F9-49E3-B3B7-93DB217FA785}
+	EndGlobalSection
+EndGlobal

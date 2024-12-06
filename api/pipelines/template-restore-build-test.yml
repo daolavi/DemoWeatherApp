@@ -1,0 +1,48 @@
+parameters:
+  dotNetVersion: ''
+  artifactName: ''
+
+jobs:
+  - job: BuildAndTest
+    displayName: 'Restore, Build and Test'
+    steps:
+      - task: UseDotNet@2
+        displayName: 'Install .NET SDK'
+        inputs:
+          version: ${{ parameters.dotNetVersion }}
+
+      - task: NuGetToolInstaller@1
+        displayName: 'Install NuGet'
+
+      - task: NuGetCommand@2
+        displayName: 'Restore NuGet Packages'
+        inputs:
+          restoreSolution: '**/*.sln'
+          
+      - task: DotNetCoreCLI@2
+        displayName: 'Build'
+        inputs:
+          command: build
+          projects: '**/*.csproj'
+          arguments: '--configuration release'
+          
+      - task: DotNetCoreCLI@2
+        displayName: 'Run Tests'
+        inputs:
+          command: test
+          projects: '**/*tests/*tests.csproj'
+          
+      - task: DotNetCoreCLI@2
+        displayName: 'Publish build'
+        condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+        inputs:
+          command: publish
+          publishWebProjects: true
+          arguments: '--configuration release --output $(Build.ArtifactStagingDirectory)'
+          
+      - task: PublishPipelineArtifact@1
+        displayName: 'Publish artifact'
+        condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+        inputs:
+          targetPath: '$(Build.ArtifactStagingDirectory)'
+          artifactName: ${{ parameters.artifactName }}

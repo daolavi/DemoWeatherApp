@@ -1,0 +1,49 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  azureSubscription: 'rm-service-connection'
+  dotNetVersion: '8.x'
+  artifactName: 'weatherapi'
+  resourceGroupName: 'weatherapi'
+  appServiceName: 'weatherapi'
+
+stages:
+  - stage: BuildAndTest
+    displayName: 'Build and Test'
+    jobs:
+      - template: template-restore-build-test.yml
+        parameters:
+          dotNetVersion: $(dotNetVersion)
+          artifactName: $(artifactName)
+
+  - stage: DeployToStaging
+    displayName: 'Deploy to Staging'
+    dependsOn: BuildAndTest
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - template: template-deploy.yml
+        parameters:
+          environment: 'staging'
+          azureSubscription: $(azureSubscription)
+          appServiceName: '$(appServiceName)-staging'
+          resourceGroupName: '$(resourceGroupName)-staging-rg'
+          artifactName: $(artifactName)
+          
+
+  - stage: DeployToProduction
+    displayName: 'Deploy to Production'
+    dependsOn: DeployToStaging
+    condition: false
+    #condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - template: template-deploy.yml
+        parameters:
+          environment: 'production'
+          azureSubscription: $(azureSubscription)
+          appServiceName: '$(appServiceName)-prod'
+          resourceGroupName: '$(resourceGroupName)-prod-rg'
+          artifactName: $(artifactName)
