@@ -7,7 +7,7 @@ DemoWeatherApp is a simple web application that displays the local time, tempera
 ## Features
 
 - **Weather Data Integration:**  
-  Utilizes the [WeatherAPI](https://www.weatherapi.com/) to fetch weather and astronomical data:  
+  Utilises the [WeatherAPI](https://www.weatherapi.com/) to fetch weather and astronomical data:  
   - **Current Weather:**  
     Endpoint: `http://api.weatherapi.com/v1/current.json`  
     Provides details such as city location, temperature, and local time.  
